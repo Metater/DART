@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Vector3 v = transform.position.normalized;
+        float lat = (float)Mathf.Acos(v.y / 1.001f); //theta
+        float lon = (float)Mathf.Atan(v.x / v.z); //phi
+        print(lat * Mathf.Rad2Deg + " : " + lon * Mathf.Rad2Deg);
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SetCursorVisibility(!Cursor.visible);

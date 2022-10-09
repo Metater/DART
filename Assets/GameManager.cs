@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
     // 5000k default
     // 2 intensity
 
+    // 0.0025, 4
+    // 0.01, 1
+    // 0.01, 0.1
+
     private void OnValidate()
     {
         if (update)
